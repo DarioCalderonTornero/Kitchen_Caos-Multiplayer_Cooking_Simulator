@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8fae8ab0f0438d49a997c5e60c075cd, type: 3}
+  m_Name: Tomato
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 7478391958859588083, guid: 950548d2e5bf90b44a6073e6bf09f4c4, type: 3}
+  sprite: {fileID: 21300000, guid: 91e8fe3de9249fc44b7bdd8050062896, type: 3}
+  objectName: Tomatoo
