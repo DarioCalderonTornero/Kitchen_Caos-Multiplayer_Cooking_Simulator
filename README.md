@@ -100,11 +100,9 @@ The project demonstrates professional-level usage of **Unity Netcode for GameObj
 
 ---
 
-## 📎 Repository & Links
-- **GitHub Repository:** *(Insert link here)*  
-- **Demo / Build:** *(Optional – e.g. Itch.io, Google Drive)*  
-- **Portfolio Website:** *(Insert your site link)*  
-- **Contact:** *(Insert email or LinkedIn link)*  
+## Media
+![Paraborrar2025-10-3000-50-31-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/3056a24f-70b7-48f3-ad52-ade51afeacbe)
+
 
 ---
 
