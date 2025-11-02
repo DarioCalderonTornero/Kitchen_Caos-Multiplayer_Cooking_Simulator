@@ -117,8 +117,8 @@ This project showcases deep knowledge of:
 ---
 
 ### 🧑‍💻 Author
-Developed by **[Your Name]** – Game Developer & Programmer  
-*(Portfolio link / GitHub profile)*  
+Developed by **Darío Calderón Tornero** – Game Developer & Programmer  
+*https://dariocalderondev.wordpress.com/*  
 
 ---
 
