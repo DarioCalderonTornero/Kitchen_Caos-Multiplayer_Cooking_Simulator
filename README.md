@@ -6,7 +6,7 @@
 ---
 
 ## 🎮 Overview
-**Kitchen Clash Online** is a multiplayer cooking simulation game developed in Unity (C#) that combines advanced networking, clean architecture, and reactive gameplay design.  
+**Kitchen Caos** is a multiplayer cooking simulation game developed in Unity (C#) that combines advanced networking, clean architecture, and reactive gameplay design.  
 Players join online lobbies, select their characters, and enter a fast-paced kitchen where they must cook, cut, fry, and deliver dishes to win.  
 The project demonstrates professional-level usage of **Unity Netcode for GameObjects**, **Relay & Lobby services**, and a modular, object-oriented gameplay architecture.
 
