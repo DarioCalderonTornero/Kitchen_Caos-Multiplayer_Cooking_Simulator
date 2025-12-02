@@ -1,4 +1,4 @@
-# 🍳 Kitchen Clash Online – Multiplayer Cooking Simulation
+# 🍳 Kitchen Caos Online – Multiplayer Cooking Simulation
 
 ## 📝 About
 *A fully networked multiplayer cooking game built in Unity, featuring modular gameplay systems, scalable clean code, and full Netcode for GameObjects integration. Up to four players compete or collaborate in real time to prepare and deliver recipes, complete with synchronized interactions, custom inputs, and immersive audiovisual feedback.*
