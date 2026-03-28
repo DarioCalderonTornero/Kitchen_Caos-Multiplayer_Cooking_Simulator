@@ -8,6 +8,7 @@ using UnityEngine;
 public class KitchenGameManager : NetworkBehaviour
 {
     private Dictionary<ulong, bool> localPlayerReadyDictionary;
+    private Dictionary<ulong, bool> localPlayerRetryDictionary;
 
     public static KitchenGameManager Instance { get; private set; }
     public enum States {waitingToStart, CountDown, Playing, GameOver }
@@ -28,12 +29,15 @@ public class KitchenGameManager : NetworkBehaviour
     public event EventHandler OnPlayingGame;
     public event EventHandler OnLocalPlayerReadyChanged;
 
+    public event EventHandler OnRetryChanged;
+
     private bool isGamePaused;
 
     private void Awake()
     {
         Instance = this;
         localPlayerReadyDictionary = new Dictionary<ulong, bool>();
+        localPlayerRetryDictionary = new Dictionary<ulong, bool>(); 
     }
 
     private void Start()
@@ -105,6 +109,42 @@ public class KitchenGameManager : NetworkBehaviour
         }
 
         Debug.Log("All clients ready" + allClientsAreReady);
+    }
+
+    public void SetPlayerRetry()
+    {
+        SetPlayerRetryServerRpc();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void SetPlayerRetryServerRpc(ServerRpcParams serverRpcParams = default)
+    {
+        localPlayerRetryDictionary[serverRpcParams.Receive.SenderClientId] = true;
+
+        NotifyRetryChangedClientRpc();
+
+        bool areAllClientsRetry = true; 
+
+        foreach (ulong clientID in NetworkManager.Singleton.ConnectedClientsIds)
+        {
+            if (!localPlayerRetryDictionary.ContainsKey(clientID) || !localPlayerRetryDictionary[clientID])
+            {
+                areAllClientsRetry = false;
+                break;
+            }
+        }
+
+        if (areAllClientsRetry)
+        {
+            localPlayerRetryDictionary.Clear();
+            Loader.LoadNetwork(Loader.Scene.MainScene);
+        }
+    }
+
+    [ClientRpc]
+    private void NotifyRetryChangedClientRpc()
+    {
+        OnRetryChanged?.Invoke(this, EventArgs.Empty);  
     }
 
     private void PlayerInputs_OnGamePaused(object sender, EventArgs e)
@@ -203,5 +243,10 @@ public class KitchenGameManager : NetworkBehaviour
     public float GetGameTimerUI()
     {
         return 1 -(playingTimer.Value / playingTimerMax);
+    }
+
+    public bool HasPlayerPressedRetry(ulong clientId)
+    {
+        return localPlayerRetryDictionary.ContainsKey(clientId) && localPlayerRetryDictionary[clientId];
     }
 }

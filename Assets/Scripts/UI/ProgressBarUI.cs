@@ -11,7 +11,7 @@ public class ProgressBarUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (hasProgress != null)
+        if (hasProgress == null)
         {
             Debug.LogError("Error");
         }

@@ -12,8 +12,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.Netcode.Transports.UTP;
 using Unity.Netcode;
-using Unity.Networking.Transport.Relay;
-using Unity.Services.Matchmaker.Models;
 
 public class KitchenGameLobby : MonoBehaviour
 {

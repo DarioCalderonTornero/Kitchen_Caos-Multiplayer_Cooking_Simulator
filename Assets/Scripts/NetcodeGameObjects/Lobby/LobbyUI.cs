@@ -88,5 +88,7 @@ public class LobbyUI : MonoBehaviour
     private void OnDestroy()
     {
         KitchenGameLobby.Instance.OnLobbyListChanged -= KitchenGameLobby_OnLobbyListChanged;
+        LobbyMessageUI.Instance.OnSelectCreateLobbyButton -= LobbyMessageUI_OnSelectCreateLobbyButton;
+        CreateLobbyUI.Instance.OnCloseButtonPressed -= CreateLobbyUI_OnCloseButtonPressed;
     }
 }
