@@ -1,4 +1,4 @@
-# 🍳 Kitchen Caos Online – Multiplayer Cooking Simulation
+# 🍳 Kitchen Caos – Multiplayer Cooking Simulation
 
 ## 📝 About
 *A fully networked multiplayer cooking game built in Unity, featuring modular gameplay systems, scalable clean code, and full Netcode for GameObjects integration. Up to four players compete or collaborate in real time to prepare and deliver recipes, complete with synchronized interactions, custom inputs, and immersive audiovisual feedback.*
@@ -48,7 +48,7 @@ The project demonstrates professional-level usage of **Unity Netcode for GameObj
 ## 🧩 Technical Stack
 | Category | Technology |
 |-----------|-------------|
-| **Engine** | Unity 2022+ |
+| **Engine** | Unity 6 (6000.2) |
 | **Language** | C# |
 | **Networking** | Unity Netcode for GameObjects (NGO), Relay, Lobby Services |
 | **Input** | Unity Input System (rebinding supported) |
@@ -75,7 +75,7 @@ The project demonstrates professional-level usage of **Unity Netcode for GameObj
 ## 🧪 Notable Technical Highlights
 - Advanced **RPC synchronization** for time-based mechanics (cooking, cutting, frying).  
 - Smart **parent-child assignment** for all network objects (`KitchenObjectParent`).  
-- **Client-side prediction** and authority-safe logic to prevent desync.  
+- **Replicated state** with `NetworkVariable` / `NetworkList`: game state, countdown and match timers, stove frying/burning timers and the lobby player list.  
 - **Event-based architecture** to trigger sounds, VFX, and UI updates seamlessly.  
 - Highly modular, **extensible system** for adding new gameplay mechanics.
 
@@ -101,24 +101,24 @@ The project demonstrates professional-level usage of **Unity Netcode for GameObj
 ---
 
 ## Media
-![Paraborrar2025-10-3000-50-31-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/3056a24f-70b7-48f3-ad52-ade51afeacbe)
+![Kitchen Caos gameplay](https://github.com/user-attachments/assets/3056a24f-70b7-48f3-ad52-ade51afeacbe)
 
 
 ---
 
 ## 💡 Lessons Learned
-This project showcases deep knowledge of:
-- Multiplayer architecture and synchronization using Unity Netcode.  
-- Scalable, maintainable game system design with C#.  
-- Efficient event-driven gameplay programming.  
-- Integration of Unity’s modern systems (Input, Lobby, Relay, ScriptableObjects).  
-- Building production-ready foundations for online cooperative experiences.
+Working on this project I learned:
+- How to structure multiplayer gameplay with Unity Netcode (server authority, RPCs, `NetworkVariable`s).  
+- How to keep game systems modular and maintainable in C# as the project grows.  
+- Event-driven gameplay programming to decouple logic from audio, VFX and UI.  
+- Integrating Unity's services and tools (Input System, Lobby, Relay, ScriptableObjects).  
+- Upgrading an existing networked project to Unity 6.
 
 ---
 
 ### 🧑‍💻 Author
-Developed by **Darío Calderón Tornero** – Game Developer & Programmer  
-*https://dariocalderondev.wordpress.com/*  
+Developed by **Darío Calderón Tornero** – Gameplay Programmer (Unity & Unreal Engine 5)  
+[Portfolio](https://dariogamedev.com) · [Project page](https://dariogamedev.com/kitchen-caos.html) · [LinkedIn](https://www.linkedin.com/in/dariocalderontornero/)  
 
 ---
 
